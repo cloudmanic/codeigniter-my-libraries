@@ -28,7 +28,7 @@ class MY_Session extends CI_Session
 	function sess_update()
 	{
 		// skip the session update if this is an AJAX call!
-		if(! IS_AJAX)
+		if(! $this->CI->input->is_ajax_request())
 		{
 			parent::sess_update();
 		}
